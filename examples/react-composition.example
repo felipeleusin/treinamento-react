@@ -1,0 +1,28 @@
+import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
+
+function Header({ children }) {
+  return (
+    <h1>{children}</h1>
+  )
+}
+
+class App extends Component {
+  state = { count: 0 }
+
+  handleClick = (ev) => {
+    this.setState((state) => ({ count: state.count + 1 }))
+  }
+
+  render() {
+    return (
+      <div>
+        <Header>{this.props.title}</Header>
+        <strong>{this.state.count}</strong>
+        <button onClick={this.handleClick}>Clique</button>
+      </div>
+    )
+  }
+}
+
+ReactDOM.render(<App title="Oi" />, document.getElementById('root'))

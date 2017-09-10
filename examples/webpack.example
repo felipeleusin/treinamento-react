@@ -1,0 +1,9 @@
+// addOneAndMultiply.js
+export function addOneAndMultiply(value) {
+  return (value + 1) * 2
+}
+
+// index.js
+import addOneAndMultiply from './addOneAndMultiply'
+
+console.log(addOneAndMultiply(2)); // 6

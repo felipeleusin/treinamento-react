@@ -1,0 +1,46 @@
+class Formulario extends Component {
+
+  constructor(props) {
+    super(props)
+    this.state = { nome: props.nome }
+  }
+
+  componentDidMount() {
+    console.log(this.div) // Bom lugar para acessar o DOM
+    // Bom lugar para fazer chamadas de rede
+  }
+
+  componentWillReceiveProps(nextProps, nextState) {
+    this.setState({ nome: nextProps.nome })
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    if (nextProps.nome === 'José') {
+      return false
+    }
+  }
+
+  componentWillUpdate(nextProps, nextState) {
+    // Não pode dar setState
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    // Bom lugar para comparar e fazer chamadas de rede
+  }
+
+  componentWillUnmount() {
+    // Limpar recursos
+  }
+
+  render() {
+    return (
+      <form onSubmit={this.handleSubmit}>
+        <h1 ref={(ref) => this.div = ref}>Cabeçalho</h1>
+        <input type="text" value={this.state.nome}  />
+        <button>Enviar!</button>
+      </form>
+    )
+  }
+}
+
+render(<Lista items={[{ id: 1, nome: 'Felipe'}]} />, document.getElementById('root))

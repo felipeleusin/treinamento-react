@@ -1,0 +1,18 @@
+import { Component } from 'react'
+import { render } from 'react-dom'
+
+function Item({ item }) {
+  return <li>{item.nome}</li>
+}
+
+function Lista({ items }) {
+  return (
+    <ul>
+      {items.map((item) => {
+        <Item key={item.id} item={item} />
+      })}
+    </ul>
+  )
+}
+
+render(<Lista items={[{ id: 1, nome: 'Felipe'}]} />, document.getElementById('root))

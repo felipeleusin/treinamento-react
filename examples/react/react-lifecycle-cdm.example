@@ -1,0 +1,26 @@
+
+class Formulario extends Component {
+  state = { nome: '' }
+
+  componentDidMount() {
+    console.log(this.header.clientWidth)
+    api.carregaPessoa(this.props.id)
+      .then((pessoa) => { this.setState({ nome: pessoa.nome })})
+  }
+
+  setRef = (ref) => {
+    this.header = ref;
+  }
+
+  render() {
+    return (
+      <form onSubmit={this.handleSubmit}>
+        <h1 ref={this.setRef}>Cabeçalho</h1>
+        <input type="text" value={this.state.nome}  />
+        <button>Enviar!</button>
+      </form>
+    )
+  }
+}
+
+render(<Formulario />, document.getElementById('root))

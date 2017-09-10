@@ -1,0 +1,11 @@
+// Variáveis constantes (porém mutáveis)
+var variavel = 1;
+const constante = 2;
+variavel += constante; // OK, variavel = 3;
+constante += 1; // ERRO
+
+const objeto = { nome: 'McLovin' };
+
+objeto = { nome: 'Felipe' }; // ERRO!
+
+objeto.nome = 'Felipe'; // OK

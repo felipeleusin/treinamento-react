@@ -1,0 +1,12 @@
+import React from 'react'
+import ReactDOM from 'react-dom'
+
+function Header({ title }) {
+  return React.createElement(
+    'h1',
+    null,
+    title
+  );
+}
+
+ReactDOM.render(React.createElement(Header, { title: "Oi!" }), document.getElementById('root'))

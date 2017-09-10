@@ -1,0 +1,19 @@
+class Formulario extends Component {
+
+  constructor(props) {
+    super(props)
+    this.state = { nome: props.nome }
+  }
+
+  render() {
+    return (
+      <form onSubmit={this.handleSubmit}>
+        <h1 ref={(ref) => this.div = ref}>Cabeçalho</h1>
+        <input type="text" value={this.state.nome}  />
+        <button>Enviar!</button>
+      </form>
+    )
+  }
+}
+
+render(<Lista items={[{ id: 1, nome: 'Felipe'}]} />, document.getElementById('root))

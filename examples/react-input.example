@@ -1,0 +1,21 @@
+import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
+
+class Input extends Component {
+  state = { value: '' }
+
+  handleChange = (ev) => {
+    this.setState((state) => ({ value: ev.target.value }))
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>{this.props.title}</h1>
+        <input value={this.state.value} onChange={this.handleChange}>
+      </div>
+    )
+  }
+}
+
+ReactDOM.render(<App title="Oi" />, document.getElementById('root'))

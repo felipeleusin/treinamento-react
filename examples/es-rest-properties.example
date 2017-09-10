@@ -1,0 +1,9 @@
+const pessoa = {
+  nome: 'felipe',
+  valor: 1,
+}
+
+const outroFelipe = {
+  ...pessoa,
+  valor: 2,
+}

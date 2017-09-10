@@ -1,0 +1,8 @@
+const objeto = { x: 1, y: 2 };
+
+const { x, y } = objeto;
+
+console.log(x) // 1
+console.log(y) // 2
+
+const adicionaPor = ({ valor, por = 2 }) => valor + por;

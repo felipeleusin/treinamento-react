@@ -1,0 +1,16 @@
+class Pessoa {
+  constructor(nome = 'McLovin') {
+    this.nome = nome;
+    this.valor = 2;
+  }
+
+  digaOi() {
+    return `${this.nome}!`
+  }
+}
+
+const mcLovin = new Pessoa();
+const felipe = new Pessoa('Felipe');
+
+console.log(mcLovin.digaOi()) // McLovin!
+console.log(felipe.digaOi()) // Felipe!

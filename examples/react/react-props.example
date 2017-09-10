@@ -1,0 +1,7 @@
+import { render } from 'react-dom'
+
+function Cabecalho({ titulo }) {
+  return <h1>{titulo}</h1>
+}
+
+render(<Cabecalho titulo="React!" />, document.getElementById('root))

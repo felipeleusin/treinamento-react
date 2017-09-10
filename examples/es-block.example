@@ -1,0 +1,8 @@
+let variavel = 1;
+
+for(let i = 0; i < 10; i++) {
+  console.log(i);
+}
+
+variavel += i; // ERRO. i não existe neste escopo
+

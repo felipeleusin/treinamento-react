@@ -1,0 +1,3 @@
+import { render } from 'react-dom'
+
+render(<h1>Título</h1>, document.getElementById('root))

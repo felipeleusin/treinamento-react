@@ -1,0 +1,11 @@
+new Promise((resolve) => {
+  setTimeout(() => {
+    resolve('Olá')
+  }, 500)
+}).then((resultado) => { console.log(resultado) }) // Chamado após 500ms
+
+new Promise((resolve, reject) => {
+  reject('Erro!')
+})
+.then((resultado) => { console.log(resultado) }) // Nunca é chamado
+.catch((erro) => console.log(erro)) // Erro!

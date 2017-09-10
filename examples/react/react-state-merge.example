@@ -1,0 +1,22 @@
+import { Component } from 'react'
+import { render } from 'react-dom'
+
+class Contador extends Component {
+  state = { count: 0, data: new Date() }
+
+  handleClick = () => {
+    this.setState((state) => ({ count: state.count + 1 }))
+  }
+
+  render() {
+    return (
+      <div>
+        <h2>{this.state.count} cliques!</h2>
+        <h4>Hoje é: {this.state.date.toLocaleTimeString()}</h4>
+        <button increment={1} onClick={this.handleClick}>Mais!</button>
+      </div>
+    )
+  }
+}
+
+render(<Contador />, document.getElementById('root))

@@ -1,0 +1,24 @@
+import { Component } from 'react'
+import { render } from 'react-dom'
+
+class Formulario extends Component {
+  handleSubmit = (ev) => {
+    ev.preventDefault()
+    alert(`Oi ${this.nome.value}`)
+  }
+
+  setNomeRef = (ref) => {
+    this.nome = ref
+  }
+
+  render() {
+    return (
+      <form onSubmit={this.handleSubmit}>
+        <input defaultValue="Fulano" type="text" ref={this.setNomeRef}  />
+        <button>Enviar!</button>
+      </form>
+    )
+  }
+}
+
+render(<Lista items={[{ id: 1, nome: 'Felipe'}]} />, document.getElementById('root))

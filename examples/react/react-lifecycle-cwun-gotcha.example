@@ -1,0 +1,33 @@
+class Perfil extends Component {
+  state = { nome: '' }
+
+  componentDidMount() {
+    this.timer = setInterval(this.carregaPessoa, 5000)
+  }
+
+  componentWillUnmount() {
+    if (this.timer) {
+      clearInterval(this.timer)
+      this.timer = null
+    }
+  }
+
+  carregaDados = () => {
+    api.carregaPessoa(this.props.id)
+      .then((pessoa) => {
+        if (this.timer) { // Checamos se o componente ainda existe
+          this.setState({ nome: pessoa.nome })
+        }
+      })
+  }
+
+  render() {
+    return this.state.nome ? (
+      <h1>{this.state.nome}</h1>
+    ) : (
+      <strong>Carregando...</strong>
+    )
+  }
+}
+
+render(<Prefil id="1" />, document.getElementById('root))

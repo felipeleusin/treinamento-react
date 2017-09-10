@@ -1,0 +1,15 @@
+// Parâmetros padrões
+function multiplicarPor(valor, por = 2) {
+  return valor * por;
+}
+
+multiplicarPor(2) // 4
+multiplicarPor(2, 4) // 8
+
+// Parâmetros rest
+function parametrosAdicionais(valor, ...rest) {
+  return valor + rest.length;
+}
+
+parametrosAdicionais(2) // 2
+parametrosAdicionais(2, 'a', 'b') // 4

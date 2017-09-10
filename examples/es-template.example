@@ -1,0 +1,8 @@
+const nome = 'McLovin';
+const titulo = `Why! ${nome}`;
+
+const email = `
+  Olá ${nome},
+  Esperamos que você consiga ler este email.
+
+  Obrigado.`;

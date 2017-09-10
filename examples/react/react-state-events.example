@@ -1,0 +1,19 @@
+import { Component } from 'react'
+import { render } from 'react-dom'
+
+class Contador extends Component {
+  state = { count: 0 }
+
+  handleClick = () => {
+    this.setState((state) => ({ count: state.count + 1 }))
+  }
+
+  render() {
+    return <div>
+      <h2>{this.state.count} cliques!</h2>
+      <button onClick={this.handleClick}>Mais!</button>
+    </div>
+  }
+}
+
+render(<Contador />, document.getElementById('root))

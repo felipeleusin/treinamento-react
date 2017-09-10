@@ -1,0 +1,21 @@
+const variavel = "bar"; // Variávels constantes
+const template = `Olá ${variavel}`; // Template strings
+for (let i = 0; i < 10; i++) { // Block scope
+  console.log(let);
+}
+const arrowFunction = (parametro) => { // Arrow functions
+  return parametro * 2;
+}
+const parametrosPadroes = (foo = 1) => { // Parâmetros padrões
+  return foo + foo;
+}
+const parametrosRestantes = (foo, ...rest) => { // Parâmetros restantes
+  return foo + rest.length;
+}
+
+const array1 = [3, 4];
+const array2 = [1, 2, ...array1]; // Spread array
+
+new Promise(function (resolve) { // Promises, código asíncrono
+  setTimeout(() => resolve(1), 500)
+}).then((result) => { console.log(result); }) // Result = 1, após 500ms

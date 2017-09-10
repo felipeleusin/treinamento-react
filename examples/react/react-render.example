@@ -1,0 +1,10 @@
+import { render } from 'react-dom'
+
+function renderUpdate() {
+  render(<div>
+    <h1>Título</h1>
+    <strong>{new Date().toISOString()}</strong>
+  </div>, document.getElementById('root))
+}
+
+setInterval(renderUpdate, 1000)

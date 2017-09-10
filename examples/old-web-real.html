@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>Uma página</title>
+    <script src="/scripts/jquery.js"></script>
+    <script src="/scripts/jquery-plugin.js"></script>
+    <script src="/scripts/jquery-plugin-1.js"></script>
+    <script src="/scripts/jquery-plugin-2.js"></script>
+    <script src="/scripts/jquery-plugin-3.js"></script>
+    <script src="/scripts/jquery-plugin-4.js"></script>
+  </head>
+  <body>
+    <h2>JavaScript!</h2>
+    <nav id="menu"><ul><li>Top Menu</li></ul></nav>
+    <button id="button-1">Oie</button>
+    <button id="button-2">Oh Hai</button>
+    <button id="button-3">Ma Oi</button>
+    <button id="button-4">Oie</button>
+
+    <script>
+      $(function() {
+        $("#button-1").on("click", function() {
+          // Mostra um modal
+        });
+        $("#button-2").on("click", function() {
+          // Faz um request AJAX
+        });
+        $("#button-3").on("click", function() {
+          // Envia um formulário
+        });
+      })
+    </script>
+  </body>
+</html>

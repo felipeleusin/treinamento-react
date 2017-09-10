@@ -1,0 +1,21 @@
+import { Component } from 'react'
+import { render } from 'react-dom'
+
+class Contador extends Component {
+  state = { count: 0 }
+
+  handleClick = (ev) => {
+    ev.preventDefault()
+    const increment = ev.target.increment
+    this.setState((state) => ({ count: state.count + increment }))
+  }
+
+  render() {
+    return <div>
+      <h2>{this.state.count} cliques!</h2>
+      <button increment={1} onClick={this.handleClick}>Mais!</button>
+    </div>
+  }
+}
+
+render(<Contador />, document.getElementById('root))

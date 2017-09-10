@@ -1,0 +1,11 @@
+// Sintaxe menor
+const adiciona2 = (valor) => valor + 2;
+
+// "this" léxico
+function teste() {
+  this.nome = 'felipe';
+
+  const chamaNome = () => this.nome + '!';
+
+  console.log(chamaNome());
+}

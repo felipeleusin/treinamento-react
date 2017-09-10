@@ -1,0 +1,22 @@
+import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
+
+class App extends Component {
+  state = { count: 0 }
+
+  handleClick = (ev) => {
+    this.setState((state) => ({ count: state.count + 1 }))
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>{this.props.title}</h1>
+        <strong>{this.state.count}</strong>
+        <button onClick={this.handleClick}>Clique</button>
+      </div>
+    )
+  }
+}
+
+ReactDOM.render(<App title="Oi" />, document.getElementById('root'))

@@ -1,0 +1,10 @@
+import { Component } from 'react'
+import { render } from 'react-dom'
+
+function BoasVindas({ usuario }) {
+  return usuario && (
+    <div>Olá ${usuario.nome}</div>
+  )
+}
+
+render(<BoasVindas usuario={{ nome: 'Felipe'}} />, document.getElementById('root))

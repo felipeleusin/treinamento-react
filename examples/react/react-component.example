@@ -1,0 +1,14 @@
+import { Component } from 'react'
+import { render } from 'react-dom'
+
+function Botao() {
+  return <button>Clique!</button>
+}
+
+class Botao extends Component {
+  render() {
+    return <button>Clique!</button>
+  }
+}
+
+render(<Botao />, document.getElementById('root))

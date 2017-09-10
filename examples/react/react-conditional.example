@@ -1,0 +1,12 @@
+import { Component } from 'react'
+import { render } from 'react-dom'
+
+function Menu({ usuario }) {
+  if (usuario !== null) {
+    return <div>Olá ${usuario.nome}</div>
+  }
+
+  return <button>Faça login!</button>
+}
+
+render(<Menu usuario={null} />, document.getElementById('root))

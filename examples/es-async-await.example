@@ -1,0 +1,5 @@
+async function chamaApi() {
+  const response = await fetch('https://swapi.co/api/people/1')
+  const body = response.json()
+  console.log(body)
+}

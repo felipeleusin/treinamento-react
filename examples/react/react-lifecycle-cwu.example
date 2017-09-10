@@ -1,0 +1,20 @@
+class Dialog extends Component {
+  state = { open: false }
+
+  componentWillUpdate(nextProps, nextState) {
+    if (nextState.open !== this.state.open && !nextState.open) {
+      this.props.onWillClose()
+    }
+  }
+
+  render() {
+    return (
+      <button onClick={() => this.setState({ open: !!this.state.open }}>Abrir</button>
+      {this.state.open && (
+        <div className="alert">Oie!</div>
+      )}
+    )
+  }
+}
+
+render(<Dialog onWillClose={() => alert('Vai fechar!')} />, document.getElementById('root))
